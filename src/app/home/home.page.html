@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-title>
+      BMI Calculator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="image-container">
+    <img src="assets/Bmibody.jpeg" alt="BMI Body" />
+  </div>
+
+  <ion-card>
+    <ion-card-header>
+
+
+      <ion-card-title>Enter Your Details</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div style="text-align:center;">
+        <img src="assets/icon/BmiMeter.png" alt="BMI Indicator" />
+      </div>
+
+      <ion-item>
+        <ion-label>Height (cm): {{ height }}</ion-label>
+        <ion-range min="100" max="250" [(ngModel)]="height">
+          <ion-label slot="start">100</ion-label>
+          <ion-label slot="end">250</ion-label>
+        </ion-range>
+      </ion-item>
+
+     
+
+      <ion-item>
+        <ion-label>Weight (kg): {{ weight }}</ion-label>
+        <ion-range min="30" max="200" [(ngModel)]="weight">
+          <ion-label slot="start">30</ion-label>
+          <ion-label slot="end">200</ion-label>
+        </ion-range>
+      </ion-item>
+
+      <ion-button expand="block" color="tertiary" (click)="calculateBMI()">
+        Calculate BMI
+      </ion-button>
+
+      <div class="result" *ngIf="bmi">
+        <p>Your BMI is: {{ bmi | number:'1.1-1' }}</p>
+        <p>BMI Category: {{ bmiCategory }}</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,35 @@
+#container {
+  text-align: center;
+  padding: 20px;
+}
+
+strong {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+ion-card {
+  padding: 10px;
+  margin: 10px;
+}
+
+ion-item {
+  --padding-start: 0;
+}
+
+ion-range {
+  margin: 20px 0;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+ion-card-title {
+  text-align:justify;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom:10px;
+
+}
